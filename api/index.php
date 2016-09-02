@@ -1,5 +1,6 @@
 <?php
-
+    require_once('entities/connection.php');
+    require_once('entities/dump.php');
 
     function getCurrentUri()
 	{
@@ -14,9 +15,12 @@
 
     switch($uri){
         case "dump":
-
+            $dump = new Dump();
+            $dump->handleRequest();
             break;
         case "dump/search":
+            $search = new Search();
+            $search->handleRequest();
             break;
         case "":
             break;

@@ -19,7 +19,7 @@
 
 
       // Request Handler
-      private function handleRequest($arg1, $arg2) {
+      private function handleRequest() {
             $requestMethod= $_SERVER['REQUEST_METHOD'];
             switch($requestMethod){
                 case "POST":
